@@ -1,12 +1,11 @@
 const clicker = document.getElementById('clicker__counter');
+const cookie = document.getElementById('cookie');
 
-let cookie = document.getElementById('cookie');
 cookie.onclick = function () {
-    if (clicker.width === '200px') {
-        clicker.width = '400px';
+    if (cookie.style.width === '200px') {
+        cookie.style.width = '400px';
     } else {
-        clicker.width = '200px';
+        cookie.style.width = '200px';
     }
-    clicker.textContent = Number(clicker.textContent) + 1;
-    
+    clicker.textContent = Number(clicker.textContent) + 1;   
 }
