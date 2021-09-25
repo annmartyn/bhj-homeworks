@@ -2,12 +2,12 @@ const seconds = document.getElementById('timer');
 
 console.log(typeof (seconds.textContent));
 
-function checkWin() {
+function checkTime() {
     if (seconds.textContent === '0') {
         alert('Вы победили в конкурсе!');
+    } else {
+        seconds.textContent = Number(seconds.textContent) - 1;
     }
 }
 
-let updateTime = () => seconds.textContent = Number(seconds.textContent) - 1;
-setInterval(updateTime, 1000);
-setInterval(checkWin, 1000);
+setInterval(checkTime, 1000);
