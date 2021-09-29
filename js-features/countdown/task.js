@@ -4,7 +4,7 @@ console.log(typeof (seconds.textContent));
 
 function checkTime() {
     if (seconds.textContent === '0') {
-        alert('Вы победили в конкурсе!');
+        alert('Р’С‹ РїРѕР±РµРґРёР»Рё РІ РєРѕРЅРєСѓСЂСЃРµ!');
     } else {
         seconds.textContent = Number(seconds.textContent) - 1;
     }
