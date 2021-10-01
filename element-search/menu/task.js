@@ -5,7 +5,7 @@ for (let i = 0; i < menuPoints.length; i++) {
         subMenuHead = menuPoints[i].closest('li');
         subMenu = subMenuHead.querySelectorAll('li ul.menu_sub');
         updSubMenu = Array.from(subMenu);
-        updSubMenu[0].classList.add('menu_active');
+        updSubMenu[0].classList.toggle('menu_active');
         return false;
     };
 };
