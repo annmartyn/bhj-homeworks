@@ -10,8 +10,10 @@ successWindow[0].onclick = () => {
     mainWindow.classList.remove('modal_active');
 };
 
-for (let i = 0; i < closeWindow.length; i++) {
-    closeWindow[i].onclick = () => {
-        this.closest.classList.remove('modal_active');
-    };
-}
+closeWindow[0].onclick = () => {
+    mainWindow.classList.remove('modal_active');
+};
+
+closeWindow[2].onclick = () => {
+    showSuccess.classList.remove('modal_active');
+};
