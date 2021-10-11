@@ -17,7 +17,7 @@ class Game {
   }
 
   registerEvents() {
-      document.addEventListener('keyup', function (event) {
+      document.addEventListener('keyup', event => {
           if (this.currentSymbol.textContent === String.fromCharCode(event.code)) {
               this.success();
           } else {
