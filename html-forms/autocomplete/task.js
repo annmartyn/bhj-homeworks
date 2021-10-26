@@ -68,12 +68,19 @@ class Autocomplete {
   }
 
   getMatches( text ) {
+      let myList = Array.from(this.input.options);
+      let givenList = [];
+      for (let i = 0; i < myList.length; i++) {
+          if (myList[i].text.includes(text)) {
+              givenList.push({ 'text': myList[i].text, 'value': myList[i].value})
+          }
+      }
     /*
       TODO: этот метод нужно дописать
-      text - фраза, которую вводят в поле поиска
+      text - фраза, которую вводят в поле поиска 
       Метод должен вернуть массив.
 
-      Он формируется на основе списка опций select-элемента (this.input)
+      Он формируется на основе списка опций select-элемента (this.input) 
       Подходящие опции - те, чей текст содержит то, что есть в аргументе text
       Необходимо вернуть массив объектов со свойствами:
       {
@@ -81,12 +88,7 @@ class Autocomplete {
         value: 'Содержимое атрибута value'
       }
     */
-    return [
-      {
-        text: 'Чубакка',
-        value: '1'
-      }
-    ];
+      return givenList;
   }
 }
 
