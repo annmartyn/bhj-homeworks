@@ -5,8 +5,10 @@ button.onclick = () => {
     wholeForm = button.closest('form');
     inputForm = wholeForm.querySelector('input');
     task = inputForm.value;
-    tasksList.insertAdjacentHTML('beforeend', '<div class="task"><div class="task__title">' + task + '</div><a href="#" class="task__remove">&times;</a></div>');
-    inputForm.value = '';
+    if (task.trim() != '') {
+        tasksList.insertAdjacentHTML('beforeend', '<div class="task"><div class="task__title">' + task + '</div><a href="#" class="task__remove">&times;</a></div>');
+        inputForm.value = '';
+    };
     myList = tasksList.getElementsByClassName('task__remove');
     let myRemover = myList[myList.length - 1];
     let taskRemove = myRemover.closest('div');
