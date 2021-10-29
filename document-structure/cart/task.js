@@ -16,26 +16,28 @@ for (let i = 0; i < controllers.length; i++) {
     };
 };
 
+const myCart = document.getElementsByClassName('cart__products')[0];
+let products = document.getElementsByClassName('cart__product');
+
 for (let a = 0; a < adds.length; a++) {
-    let prodsIn = [];
     adds[a].onclick = () => {
-        let myCart = document.getElementsByClassName('cart__products')[0];
         let amountCard = adds[a].closest('.product__quantity');
         let amount = amountCard.querySelector('.product__quantity-value').textContent;
         let buying = amountCard.closest('.product');
         let myID = buying.dataset.id;
         let mySrc = buying.querySelector('img').src;
-        if (prodsIn.indexOf(myID) == -1) {
+        if (products.length == 0) {
             let newItem = '<div class="cart__product" data-id="' + myID + '"><img class="cart__product-image" src="' + mySrc + '"><div class="cart__product-count">' + amount + '</div></div>';
-            myCart.innerHTML += newItem;
-            prodsIn.push(myID);
+            myCart.insertAdjacentHTML('beforeend', newItem);
         } else {
-            let products = myCart.querySelectorAll('.cart__product'); 
-            console.log(products);
             for (let p = 0; p < products.length; p++) {
+                console.log(amount)
                 if (products[p].dataset.id === myID) {
                     let count = products[p].querySelector('.cart__product-count');
                     count.textContent = Number(count.textContent) + Number(amount);
+                } else {
+                    let newItem = '<div class="cart__product" data-id="' + myID + '"><img class="cart__product-image" src="' + mySrc + '"><div class="cart__product-count">' + amount + '</div></div>';
+                    myCart.insertAdjacentHTML('beforeend', newItem);
                 };
             };
         };
