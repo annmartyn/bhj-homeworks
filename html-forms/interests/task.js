@@ -7,7 +7,7 @@ for (let i = 0; i < interestLabel.length; i++) {
             console.log(wholeList);
             let boxes = wholeList.querySelectorAll('.interest__check');
             for (let a = 0; a < boxes.length; a++) {
-                boxes[a].checked;
+                boxes[a].checked = true;
             };
         };
     };

@@ -2,7 +2,7 @@ const widget = document.getElementsByClassName("chat-widget")
 const messages = document.querySelector('.chat-widget__messages');
 const inputStr = document.getElementById('chat-widget__input')
 
-let messageList = ['Ну ладно :(', 'Добрый день! Не пишите нам.', 'Всего вам недоброго', 'Кто тут?', 'Где ваша совесть?', 'Мы ничего не будем вам продавать!']
+let messageList = ['РќСѓ Р»Р°РґРЅРѕ :(', 'Р”РѕР±СЂС‹Р№ РґРµРЅСЊ! РќРµ РїРёС€РёС‚Рµ РЅР°Рј.', 'Р’СЃРµРіРѕ РІР°Рј РЅРµРґРѕР±СЂРѕРіРѕ', 'РљС‚Рѕ С‚СѓС‚?', 'Р“РґРµ РІР°С€Р° СЃРѕРІРµСЃС‚СЊ?', 'РњС‹ РЅРёС‡РµРіРѕ РЅРµ Р±СѓРґРµРј РІР°Рј РїСЂРѕРґР°РІР°С‚СЊ!']
 
 widget[0].onclick = function () {
     widget[0].classList.add('chat-widget_active');
