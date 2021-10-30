@@ -11,8 +11,8 @@ button.onclick = () => {
     };
     myList = tasksList.getElementsByClassName('task__remove');
     let myRemover = myList[myList.length - 1];
-    let taskRemove = myRemover.closest('div');
     myRemover.addEventListener('click', () => {
+        let taskRemove = myRemover.closest('div.task');
         tasksList.remove(taskRemove);
     });
     return false;

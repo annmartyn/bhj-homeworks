@@ -9,9 +9,9 @@ let tools = document.getElementsByClassName('tooltip');
 
 for (let a = 0; a < needTooltip.length; a++) {
     needTooltip[a].onclick = () => {
-        console.log(needTooltip[a]);
-        console.log(tools[a]);
-        tools[a].classList.toggle('tooltip-active');
+        tools[a].style.top = needTooltip[a].getBoundingClientRect.top - 10;
+        tools[a].style.left = needTooltip[a].getBoundingClientRect.left;
+        tools[a].classList.toggle('tooltip_active');
         return false;
     };
 };
