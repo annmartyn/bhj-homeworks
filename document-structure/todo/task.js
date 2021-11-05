@@ -13,7 +13,7 @@ button.onclick = () => {
     let myRemover = myList[myList.length - 1];
     myRemover.addEventListener('click', () => {
         let taskRemove = myRemover.closest('div.task');
-        tasksList.remove(taskRemove);
+        tasksList.removeChild(taskRemove);
     });
     return false;
 };
